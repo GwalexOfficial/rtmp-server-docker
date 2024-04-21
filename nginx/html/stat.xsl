@@ -22,6 +22,7 @@
             <a href="http://nginx.org">nginx</a>&#160;<xsl:value-of select="/rtmp/nginx_version"/>,
             pid <xsl:value-of select="/rtmp/pid"/>,
             built <xsl:value-of select="/rtmp/built"/>&#160;<xsl:value-of select="/rtmp/compiler"/>
+            Adjusted by <a href='https://github.com/GwalexOfficial'>GwalexOfficial</a>
         </body>
     </html>
 </xsl:template>
