@@ -5,10 +5,10 @@ RUN apt-get update && \
     apt-get install -y build-essential libpcre3 libpcre3-dev libssl-dev wget git zlib1g-dev bash unattended-upgrades && \
     apt-get autoremove -y
 
-RUN wget 'https://nginx.org/download/nginx-1.26.0.tar.gz' \
-    && tar -zxvf nginx-1.26.0.tar.gz \
+RUN wget 'https://nginx.org/download/nginx-1.26.1.tar.gz' \
+    && tar -zxvf nginx-1.26.1.tar.gz \
     && git clone https://github.com/arut/nginx-rtmp-module.git \
-    && cd nginx-1.26.0 \
+    && cd nginx-1.26.1 \
     && ./configure --with-http_ssl_module --add-module=../nginx-rtmp-module \
     && make \
     && make install
