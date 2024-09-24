@@ -15,7 +15,9 @@ Build Image: docker build --no-cache -t rtmp-server .
 Run Container: docker run -d --name rtmp-server --restart always -p 8090:80 -p 1935:1935 rtmp-server
 
 ## Usage:
+
 Stream-URL: rtmp://ip:1935/publish/{live}
+
 Watch-URL: rtmp://ip:1935/publish/{live}
 
 {live} ist your streamkey, that can be anything
