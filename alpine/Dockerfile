@@ -18,4 +18,4 @@ RUN wget -O /usr/local/nginx/conf/nginx.conf https://raw.githubusercontent.com/G
 RUN apk del build-base wget git && \
     rm -rf /var/cache/apk/* /tmp/* /var/tmp/* /nginx-1.26.2.tar.gz /nginx-1.26.2 /nginx-rtmp-module
 
-CMD /usr/local/nginx/sbin/nginx -g "daemon off;"
+CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
