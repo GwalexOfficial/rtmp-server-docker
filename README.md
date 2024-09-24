@@ -20,6 +20,8 @@ Stream-URL: rtmp://ip:1935/publish/{live}
 
 Watch-URL: rtmp://ip:1935/publish/{live}
 
-{live} ist your streamkey, that can be anything
+Stats-URL: http://ip:8090/stats
+
+{live} is your streamkey, that can be anything
 
 Docker Hub: https://hub.docker.com/r/gwalexofficial/rtmp-server
