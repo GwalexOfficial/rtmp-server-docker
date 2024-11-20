@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.20.3
 
 RUN apk update && apk upgrade && \
     apk add --no-cache build-base pcre pcre-dev openssl openssl-dev wget git zlib-dev && \
