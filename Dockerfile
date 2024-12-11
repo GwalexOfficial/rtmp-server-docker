@@ -18,7 +18,7 @@ FROM alpine:3.21.0
 RUN apk update && apk upgrade && \
     apk add --no-cache pcre openssl zlib
 
-COPY --from=build /usr/local/nginx /usr/local/nginx
+COPY --from=builder /usr/local/nginx /usr/local/nginx
 
 RUN wget -O /usr/local/nginx/conf/nginx.conf https://raw.githubusercontent.com/GwalexOfficial/rtmp-server-docker/main/nginx/conf/nginx.conf && \
     wget -O /usr/local/nginx/html/stat.xsl https://raw.githubusercontent.com/GwalexOfficial/rtmp-server-docker/main/nginx/html/stat.xsl
