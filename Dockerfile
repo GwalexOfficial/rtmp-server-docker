@@ -3,15 +3,15 @@ FROM alpine:3.21.2 AS builder
 RUN apk update && apk upgrade && \
     apk add --no-cache build-base pcre pcre-dev openssl openssl-dev wget git zlib-dev
 
-RUN wget 'https://nginx.org/download/nginx-1.26.2.tar.gz' && \
-    tar -zxvf nginx-1.26.2.tar.gz && \
+RUN wget 'https://nginx.org/download/nginx-1.26.3.tar.gz' && \
+    tar -zxvf nginx-1.26.3.tar.gz && \
     git clone https://github.com/arut/nginx-rtmp-module.git && \
-    cd nginx-1.26.2 && \
+    cd nginx-1.26.3 && \
     ./configure --with-http_ssl_module --add-module=../nginx-rtmp-module && \
     make && \
     make install
 
-RUN rm -rf /var/cache/apk/* /tmp/* /var/tmp/* /nginx-1.26.2.tar.gz /nginx-1.26.2 /nginx-rtmp-module
+RUN rm -rf /var/cache/apk/* /tmp/* /var/tmp/* /nginx-1.26.3.tar.gz /nginx-1.26.3 /nginx-rtmp-module
 
 FROM alpine:3.21.2
 
