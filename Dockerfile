@@ -1,4 +1,4 @@
-FROM alpine:3.21.2 AS builder
+FROM alpine:3.21.3 AS builder
 
 RUN apk update && apk upgrade && \
     apk add --no-cache build-base pcre pcre-dev openssl openssl-dev wget git zlib-dev
@@ -13,7 +13,7 @@ RUN wget 'https://nginx.org/download/nginx-1.26.3.tar.gz' && \
 
 RUN rm -rf /var/cache/apk/* /tmp/* /var/tmp/* /nginx-1.26.3.tar.gz /nginx-1.26.3 /nginx-rtmp-module
 
-FROM alpine:3.21.2
+FROM alpine:3.21.3
 
 RUN apk update && apk upgrade && \
     apk add --no-cache pcre openssl zlib
